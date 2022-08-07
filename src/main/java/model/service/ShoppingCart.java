@@ -8,6 +8,10 @@ public class ShoppingCart {
     }
 
     public double getTotalPrice() {
+        double totalPrice = 0;
+        for (int i = 0; i < food.length; i++) {
+            totalPrice = totalPrice + food[i].getTotalPrice();
+        }
         return 0;
     }
 
