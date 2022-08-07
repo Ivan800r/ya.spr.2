@@ -17,13 +17,26 @@ public abstract class Food implements Discountable {
         this.isVegetarian = isVegetarian;
     }
 
-    public Food(int amount, double price) {
-        this.amount = amount;
-        this.price = price;
-    }
-
     @Override
     public double getDiscount() {
+        return 0;
+    }
+
+    public double getTotalPrice() {
+        return amount * price;
+    }
+
+    public double getTotalPriceWithDiscount() {
+        if (getDiscount() == 0){
+            return getTotalPrice();
+    }
+        return getDiscount()/100*getTotalPrice();
+    }
+
+    public double getTotalPriceVegetarian() {
+        if (isVegetarian){
+            return getTotalPrice();
+        }
         return 0;
     }
 }

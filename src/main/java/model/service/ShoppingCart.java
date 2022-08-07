@@ -1,10 +1,21 @@
 package model.service;
 
 public class ShoppingCart {
-    Food[] food = {
-            new Meat(5, 100),
-            new Apple(10, 50, true),
-            new Apple(8, 60, false)
-    };
+    private final Food[] food;
 
+    public ShoppingCart(Food[] food) {
+        this.food = food;
+    }
+
+    public double getTotalPrice() {
+        return 0;
+    }
+
+    public double getTotalPriceWithDiscount() {
+        return 0;
+    }
+
+    public double getTotalPriceVegetarian() {
+        return 0;
+    }
 }
