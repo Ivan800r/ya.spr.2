@@ -1,6 +1,9 @@
 package model.service;
 
+import model.constants.Colour;
+
 public abstract class Food implements Discountable {
+
 
     //количество продукта в килограммах
     protected int amount;

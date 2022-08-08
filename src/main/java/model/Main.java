@@ -36,6 +36,7 @@ package model;
 //        Яблоки красные в количестве 10 кг по цене 50 рублей;
 //        Яблоки зелёные в количестве 8 кг по цене 60 рублей.
 
+import model.constants.Colour;
 import model.service.Apple;
 import model.service.Food;
 import model.service.Meat;
@@ -51,11 +52,12 @@ import static java.awt.Color.RED;
 //        Все переменные класса должны быть недоступны извне, если не указано иное. Доступ к ним реализуй через известные тебе методы: создавай только те, которые действительно нужны для реализации описанной функциональности.
 public class Main {
     public static void main(String[] args) {
+//
         boolean isVegetarian = false;
         Food[] food = {
             new Meat(5, 100, isVegetarian),
-            new Apple(10, 50, true),
-            new Apple(8, 60, false)
+            new Apple(10, 50, Colour.RED),
+            new Apple(8, 60, Colour.GREEN)
         };
 
         ShoppingCart shoppingCart = new ShoppingCart(food);
