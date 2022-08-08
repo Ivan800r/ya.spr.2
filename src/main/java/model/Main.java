@@ -52,17 +52,16 @@ import static java.awt.Color.RED;
 //        Все переменные класса должны быть недоступны извне, если не указано иное. Доступ к ним реализуй через известные тебе методы: создавай только те, которые действительно нужны для реализации описанной функциональности.
 public class Main {
     public static void main(String[] args) {
-//
-        boolean isVegetarian = false;
+
         Food[] food = {
-            new Meat(5, 100, isVegetarian),
-            new Apple(10, 50, Colour.RED),
-            new Apple(8, 60, Colour.GREEN)
+            new Meat(5, 100, false),
+            new Apple(10, 50,true, Colour.RED),
+            new Apple(8, 60,true, Colour.GREEN)
         };
 
         ShoppingCart shoppingCart = new ShoppingCart(food);
-        System.out.println("общую сумму всех товаров без скидки - " + shoppingCart.getTotalPrice());
-        System.out.println("сумму скидки для всей корзины - " + shoppingCart.getTotalPriceWithDiscount());
-        System.out.println("сумму всех вегетарианских продуктов без скидки - " + shoppingCart.getTotalPriceVegetarian());
+        System.out.println("общую сумму всех товаров без скидки getTotalPrice - " + shoppingCart.getTotalPrice());
+        System.out.println("сумму скидки для всей корзины getTotalPriceWithDiscount - " + shoppingCart.getTotalPriceWithDiscount());
+        System.out.println("сумму всех вегетарианских продуктов без скидки getTotalPriceVegetarian - " + shoppingCart.getTotalPriceVegetarian());
     }
 }

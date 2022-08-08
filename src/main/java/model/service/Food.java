@@ -4,7 +4,7 @@ import model.constants.Colour;
 
 public abstract class Food implements Discountable {
 
-
+    Colour colour;
     //количество продукта в килограммах
     protected int amount;
 
@@ -14,16 +14,24 @@ public abstract class Food implements Discountable {
     //флаг, который показывает, вегетарианский ли продукт
     protected boolean isVegetarian;
 
+    public Food(int amount, double price) {
+        this.amount = amount;
+        this.price = price;
+    }
+
+    public Food(int amount, double price, boolean isVegetarian, Colour colour) {
+        this.amount = amount;
+        this.price = price;
+        this.isVegetarian = isVegetarian;
+        this.colour = colour;
+    }
+
     public Food(int amount, double price, boolean isVegetarian) {
         this.amount = amount;
         this.price = price;
         this.isVegetarian = isVegetarian;
     }
 
-    @Override
-    public double getDiscount() {
-        return 0;
-    }
 
     public double getTotalPrice() {
         return amount * price;
@@ -33,7 +41,7 @@ public abstract class Food implements Discountable {
         if (getDiscount() == 0){
             return getTotalPrice();
     }
-        return getDiscount()/100*getTotalPrice();
+        return getDiscount()/100 * getTotalPrice();
     }
 
     public double getTotalPriceVegetarian() {
