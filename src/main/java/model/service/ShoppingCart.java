@@ -22,14 +22,14 @@ public class ShoppingCart {
         for (int i = 0; i < food.length; i++) {
             totalPriceWithDiscount = totalPriceWithDiscount + food[i].getTotalPriceWithDiscount();
         }
-        return 0;
+        return totalPriceWithDiscount;
     }
 
-    public double getTotalPriceVegetarian() {
+    public double getTotalPriceVegetarianWithoutDiscount() {
         double totalPriceVegetarian = 0;
         for (int i = 0; i < food.length; i++) {
-            totalPriceVegetarian = totalPriceVegetarian + food[i].getTotalPriceVegetarian();
+            totalPriceVegetarian = totalPriceVegetarian + food[i].getTotalPriceVegetarianWithoutDiscount();
         }
-        return 0;
+        return totalPriceVegetarian;
     }
 }

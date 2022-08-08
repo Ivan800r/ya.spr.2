@@ -49,7 +49,8 @@ import static java.awt.Color.RED;
 //        общую сумму всех товаров без скидки,
 //        сумму скидки для всей корзины,
 //        сумму всех вегетарианских продуктов без скидки.
-//        Все переменные класса должны быть недоступны извне, если не указано иное. Доступ к ним реализуй через известные тебе методы: создавай только те, которые действительно нужны для реализации описанной функциональности.
+//        Все переменные класса должны быть недоступны извне, если не указано иное. Доступ к ним реализуй через известные тебе методы: создавай только те,
+//        которые действительно нужны для реализации описанной функциональности.
 public class Main {
     public static void main(String[] args) {
 
@@ -60,8 +61,8 @@ public class Main {
         };
 
         ShoppingCart shoppingCart = new ShoppingCart(food);
-        System.out.println("общую сумму всех товаров без скидки getTotalPrice - " + shoppingCart.getTotalPrice());
-        System.out.println("сумму скидки для всей корзины getTotalPriceWithDiscount - " + shoppingCart.getTotalPriceWithDiscount());
-        System.out.println("сумму всех вегетарианских продуктов без скидки getTotalPriceVegetarian - " + shoppingCart.getTotalPriceVegetarian());
+        System.out.println("Общую сумму всех товаров без скидки getTotalPrice - " + shoppingCart.getTotalPrice());
+        System.out.println("Сумму скидки для всей корзины getTotalPriceWithDiscount - " + shoppingCart.getTotalPriceWithDiscount());
+        System.out.println("Сумму всех вегетарианских продуктов без скидки getTotalPriceVegetarian - " + shoppingCart.getTotalPriceVegetarianWithoutDiscount());
     }
 }

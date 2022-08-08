@@ -14,24 +14,11 @@ public abstract class Food implements Discountable {
     //флаг, который показывает, вегетарианский ли продукт
     protected boolean isVegetarian;
 
-    public Food(int amount, double price) {
-        this.amount = amount;
-        this.price = price;
-    }
-
-    public Food(int amount, double price, boolean isVegetarian, Colour colour) {
-        this.amount = amount;
-        this.price = price;
-        this.isVegetarian = isVegetarian;
-        this.colour = colour;
-    }
-
     public Food(int amount, double price, boolean isVegetarian) {
         this.amount = amount;
         this.price = price;
         this.isVegetarian = isVegetarian;
     }
-
 
     public double getTotalPrice() {
         return amount * price;
@@ -41,10 +28,10 @@ public abstract class Food implements Discountable {
         if (getDiscount() == 0){
             return getTotalPrice();
     }
-        return getDiscount()/100 * getTotalPrice();
+        return getDiscount() * getTotalPrice() /100;
     }
 
-    public double getTotalPriceVegetarian() {
+    public double getTotalPriceVegetarianWithoutDiscount() {
         if (isVegetarian){
             return getTotalPrice();
         }

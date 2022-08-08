@@ -6,7 +6,7 @@ import model.constants.Discount;
 public class Apple extends Food {
     Colour colour;
     public Apple(int amount, double price, boolean isVegetarian, Colour colour) {
-        super(amount, price, true, colour);
+        super(amount, price, true);
         this.colour = colour;
     }
 
