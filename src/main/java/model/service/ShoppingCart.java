@@ -1,7 +1,5 @@
 package model.service;
 
-import model.constants.Discount;
-
 public class ShoppingCart {
     private final Food[] food;
 
@@ -12,7 +10,7 @@ public class ShoppingCart {
     public double getTotalPrice() {
         double totalPrice = 0;
         for (int i = 0; i < food.length; i++) {
-            totalPrice = totalPrice + food[i].getTotalPrice();
+            totalPrice += food[i].getTotalPrice();
         }
         return totalPrice;
     }
@@ -20,7 +18,7 @@ public class ShoppingCart {
     public double getTotalPriceWithDiscount() {
         double totalPriceWithDiscount = 0;
         for (int i = 0; i < food.length; i++) {
-            totalPriceWithDiscount = totalPriceWithDiscount + food[i].getTotalPriceWithDiscount();
+            totalPriceWithDiscount += food[i].getTotalPriceWithDiscount();
         }
         return totalPriceWithDiscount;
     }
@@ -28,7 +26,7 @@ public class ShoppingCart {
     public double getTotalPriceVegetarianWithoutDiscount() {
         double totalPriceVegetarian = 0;
         for (int i = 0; i < food.length; i++) {
-            totalPriceVegetarian = totalPriceVegetarian + food[i].getTotalPriceVegetarianWithoutDiscount();
+            totalPriceVegetarian += food[i].getTotalPriceVegetarianWithoutDiscount();
         }
         return totalPriceVegetarian;
     }

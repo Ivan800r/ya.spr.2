@@ -1,18 +1,17 @@
 package model.service;
-
-import model.constants.Colour;
 import model.constants.Discount;
 
 public class Apple extends Food {
-    Colour colour;
-    public Apple(int amount, double price, boolean isVegetarian, Colour colour) {
+    private String appleRed;
+
+    public Apple(int amount, double price, boolean isVegetarian, String red) {
         super(amount, price, true);
-        this.colour = colour;
+        this.appleRed = red;
     }
 
     @Override
     public double getDiscount() {
-        if (this.colour == Colour.RED) {
+        if (this.appleRed == colour.appleRed) {
             return Discount.SIXTY;
         }
         return Discount.ZERO;
